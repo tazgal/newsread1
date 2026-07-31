@@ -124,6 +124,7 @@ BASE_SOURCES_DATA = [
     {"name": "Πρώτο Θέμα", "category": "news", "subcategory": "general", "url": "https://www.protothema.gr/"},
     {"name": "in.gr", "category": "news", "subcategory": "general", "url": "https://www.in.gr/"},
     {"name": "Καθημερινή", "category": "news", "subcategory": "general", "url": "https://www.kathimerini.gr/"},
+    {"name": "Εφημερίδα Συντακτών", "category": "news", "subcategory": "general", "url": "https://www.efsyn.gr"},
     {"name": "Capital", "category": "news", "subcategory": "general", "url": "https://www.capital.gr/"},
     {"name": "CNN Greece", "category": "news", "subcategory": "general", "url": "https://www.cnn.gr/"},
     {"name": "Ναυτεμπορική", "category": "news", "subcategory": "general", "url": "https://www.naftemporiki.gr/"},
