@@ -99,6 +99,21 @@ st.markdown("""
 # ΟΙ ΠΗΓΕΣ ΣΟΥ (πρόσθεσε όσες θέλεις)
 # ============================================
 BASE_SOURCES_DATA = [
+    
+     # Greek News
+    {"name": "Πρώτο Θέμα", "category": "news", "subcategory": "general", "url": "https://www.protothema.gr/"},
+    {"name": "in.gr", "category": "news", "subcategory": "general", "url": "https://www.in.gr/"},
+    {"name": "Καθημερινή", "category": "news", "subcategory": "general", "url": "https://www.kathimerini.gr/"},
+    {"name": "Newsit", "category": "news", "subcategory": "general", "url": "https://www.newsit.gr/"},
+    {"name": "News247", "category": "news", "subcategory": "general", "url": "https://www.news247.gr/"},
+    {"name": "902", "category": "news", "subcategory": "general", "url": "https://www.902.gr/"},
+    {"name": "Rizospastis", "category": "news", "subcategory": "general", "url": "https://www.rizospastis.gr/"},
+    {"name": "Εφημερίδα Συντακτών", "category": "news", "subcategory": "general", "url": "https://www.efsyn.gr"},
+    {"name": "Capital", "category": "news", "subcategory": "general", "url": "https://www.capital.gr/"},
+    {"name": "CNN Greece", "category": "news", "subcategory": "general", "url": "https://www.cnn.gr/"},
+    {"name": "Ναυτεμπορική", "category": "news", "subcategory": "general", "url": "https://www.naftemporiki.gr/"},
+    {"name": "Zougla", "category": "news", "subcategory": "general", "url": "https://www.zougla.gr/"},
+    
     # International - Geopolitics
     {"name": "The Cradle", "category": "international sources", "subcategory": "geopolitics", "url": "https://new.thecradle.co/"},
     {"name": "NATO", "category": "international sources", "subcategory": "geopolitics", "url": "https://www.nato.int/"},
@@ -120,14 +135,6 @@ BASE_SOURCES_DATA = [
     # International - Osint
     {"name": "RAND", "category": "international sources", "subcategory": "Osint", "url": "https://www.rand.org"},
     
-    # Greek News
-    {"name": "Πρώτο Θέμα", "category": "news", "subcategory": "general", "url": "https://www.protothema.gr/"},
-    {"name": "in.gr", "category": "news", "subcategory": "general", "url": "https://www.in.gr/"},
-    {"name": "Καθημερινή", "category": "news", "subcategory": "general", "url": "https://www.kathimerini.gr/"},
-    {"name": "Εφημερίδα Συντακτών", "category": "news", "subcategory": "general", "url": "https://www.efsyn.gr"},
-    {"name": "Capital", "category": "news", "subcategory": "general", "url": "https://www.capital.gr/"},
-    {"name": "CNN Greece", "category": "news", "subcategory": "general", "url": "https://www.cnn.gr/"},
-    {"name": "Ναυτεμπορική", "category": "news", "subcategory": "general", "url": "https://www.naftemporiki.gr/"},
     
     # Global Economy
     {"name": "IMF", "category": "global economy", "subcategory": "think tanks", "url": "https://www.imf.org/en/Home"},
