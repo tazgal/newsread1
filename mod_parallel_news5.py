@@ -96,7 +96,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ============================================
-# ΒΑΛΕ ΕΔΩ ΟΛΕΣ ΤΙΣ ΠΗΓΕΣ ΣΟΥ
+# ΟΙ ΠΗΓΕΣ ΣΟΥ (πρόσθεσε όσες θέλεις)
 # ============================================
 BASE_SOURCES_DATA = [
     # International - Geopolitics
@@ -214,7 +214,7 @@ def get_sources_by_category(all_sources, category):
     return [item for item in all_sources if item['category'] == category]
 
 def main():
-    st.title("📰 News Dashboard")
+    st.title("📰 News Dashboard - Iframe + Scraping")
     st.caption("💡 Επιλέξτε κατηγορία και δείτε ΟΛΕΣ τις πηγές ταυτόχρονα")
     
     all_sources = get_all_sources()
@@ -328,7 +328,7 @@ def main():
             st.markdown("---")
             st.markdown("### 🗑️ Διαγραφή Custom Πηγών")
             for i, src in enumerate(custom_sources):
-                col1, col2 = st.columns([3, 1])
+                col1, col2 = st.columns([4, 1])
                 with col1:
                     st.write(f"• {src['name']} ({src['category']})")
                 with col2:
@@ -342,47 +342,60 @@ def main():
         st.markdown("---")
         st.caption(f"📊 Σύνολο πηγών: {len(all_sources)}")
     
+    # ============================================
+    # ΕΜΦΑΝΙΣΗ ΜΕ 3 ΣΤΗΛΕΣ - ΣΩΣΤΗ ΕΚΔΟΣΗ
+    # ============================================
     category_sources = get_sources_by_category(all_sources, st.session_state.selected_category)
     
     if category_sources:
-        cols = st.columns(3)
+        # Υπολογισμός πόσες σειρές χρειαζόμαστε (3 στήλες ανά σειρά)
+        num_sources = len(category_sources)
+        num_rows = (num_sources + 2) // 3  # Στρογγυλοποίηση προς τα πάνω
         
-        for idx, source in enumerate(category_sources):
-            col_idx = idx % 4
-            with cols[col_idx]:
-                source_name = source['name']
-                source_url = source['url']
-                articles = st.session_state.news_data.get(source_name, [])
+        for row in range(num_rows):
+            # Δημιουργία 3 στηλών για κάθε σειρά
+            cols = st.columns(3)
+            
+            for col_idx in range(3):
+                source_idx = row * 3 + col_idx
                 
-                with st.container():
-                    st.markdown(f"""
-                    <div class="news-card">
-                        <h4>📰 {source_name}</h4>
-                        <div class="iframe-wrapper">
-                            <iframe src="{source_url}" 
-                                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-                                    loading="lazy">
-                            </iframe>
-                        </div>
-                        <div class="articles-list">
-                    """, unsafe_allow_html=True)
+                # Έλεγχος αν υπάρχει πηγή σε αυτή τη θέση
+                if source_idx < num_sources:
+                    source = category_sources[source_idx]
+                    source_name = source['name']
+                    source_url = source['url']
+                    articles = st.session_state.news_data.get(source_name, [])
                     
-                    if articles:
-                        for article in articles[:8]:
-                            title = article['title'][:80] + "..." if len(article['title']) > 80 else article['title']
+                    with cols[col_idx]:
+                        with st.container():
                             st.markdown(f"""
-                            <div class="news-item">
-                                <a href="{article['url']}" target="_blank">📌 {title}</a>
-                            </div>
+                            <div class="news-card">
+                                <h4>📰 {source_name}</h4>
+                                <div class="iframe-wrapper">
+                                    <iframe src="{source_url}" 
+                                            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+                                            loading="lazy">
+                                    </iframe>
+                                </div>
+                                <div class="articles-list">
                             """, unsafe_allow_html=True)
-                    else:
-                        st.markdown("""
-                        <div class="no-articles">
-                            ⏳ Φόρτωση άρθρων...
-                        </div>
-                        """, unsafe_allow_html=True)
-                    
-                    st.markdown("</div></div>", unsafe_allow_html=True)
+                            
+                            if articles:
+                                for article in articles[:8]:
+                                    title = article['title'][:80] + "..." if len(article['title']) > 80 else article['title']
+                                    st.markdown(f"""
+                                    <div class="news-item">
+                                        <a href="{article['url']}" target="_blank">📌 {title}</a>
+                                    </div>
+                                    """, unsafe_allow_html=True)
+                            else:
+                                st.markdown("""
+                                <div class="no-articles">
+                                    ⏳ Φόρτωση άρθρων...
+                                </div>
+                                """, unsafe_allow_html=True)
+                            
+                            st.markdown("</div></div>", unsafe_allow_html=True)
     else:
         st.warning("⚠️ Δεν βρέθηκαν πηγές για αυτή την κατηγορία")
 
