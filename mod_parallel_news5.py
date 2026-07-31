@@ -216,6 +216,19 @@ def get_sources_by_category(all_sources, category):
 def main():
     st.title("📰 News Dashboard - Iframe + Scraping")
     st.caption("💡 Επιλέξτε κατηγορία και δείτε ΟΛΕΣ τις πηγές ταυτόχρονα")
+
+       # --- Ενότητα Ραδιοφώνου ---
+    with st.expander("🎙️ Άκουσε Real FM 97.8 Live", expanded=True):
+        st.markdown("""
+        <div style="display: flex; justify-content: center; align-items: center; background-color: #f8f9fa; border-radius: 10px; padding: 10px; margin-bottom: 15px;">
+            <iframe src="https://live24.gr/radio/realfm" 
+                    style="width: 100%; max-width: 600px; height: 120px; border: none; border-radius: 8px;" 
+                    allow="autoplay; encrypted-media">
+            </iframe>
+        </div>
+        <p style="text-align: center; color: #6c757d; font-size: 0.8rem;">Ραδιόφωνο από το <a href="https://live24.gr/radio/realfm" target="_blank">live24.gr</a></p>
+        """, unsafe_allow_html=True)
+    # --- Τέλος Ενότητας Ραδιοφώνου ---
     
     all_sources = get_all_sources()
     categories = get_categories(all_sources)
