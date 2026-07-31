@@ -214,7 +214,7 @@ def get_sources_by_category(all_sources, category):
     return [item for item in all_sources if item['category'] == category]
 
 def main():
-    st.title("📰 News Dashboard - Iframe + Scraping")
+    st.title("📰 News Dashboard")
     st.caption("💡 Επιλέξτε κατηγορία και δείτε ΟΛΕΣ τις πηγές ταυτόχρονα")
     
     all_sources = get_all_sources()
@@ -328,7 +328,7 @@ def main():
             st.markdown("---")
             st.markdown("### 🗑️ Διαγραφή Custom Πηγών")
             for i, src in enumerate(custom_sources):
-                col1, col2 = st.columns([4, 1])
+                col1, col2 = st.columns([3, 1])
                 with col1:
                     st.write(f"• {src['name']} ({src['category']})")
                 with col2:
