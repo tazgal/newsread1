@@ -345,7 +345,7 @@ def main():
     category_sources = get_sources_by_category(all_sources, st.session_state.selected_category)
     
     if category_sources:
-        cols = st.columns(4)
+        cols = st.columns(3)
         
         for idx, source in enumerate(category_sources):
             col_idx = idx % 4
