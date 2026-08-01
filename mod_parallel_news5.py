@@ -231,16 +231,43 @@ def main():
     st.title("📰 Taz's News Dashboard")
     st.caption("💡 Επιλέξτε κατηγορία και δείτε ΟΛΕΣ τις πηγές ταυτόχρονα")
 
-       # --- Ενότητα Ραδιοφώνου ---
-    with st.expander("🎙️ Άκουσε Real FM 97.8 Live", expanded=True):
-        st.markdown("""
+      with st.expander("🎙️ Επιλογή Ραδιοφώνου Live", expanded=True):
+        # Λεξικό με σταθμούς: {όνομα: sid}
+        radio_stations = {
+            "Real FM 97.8": "realfm",
+            "Παραπολιτικά FM 90.1": "1986",
+            "ERTnews Radio 105.8": "2073",
+            "ΣΚΑΪ 100.3": "1334",
+        }
+        
+        # Dropdown για επιλογή σταθμού
+        selected_station_name = st.selectbox(
+            "Επιλέξτε σταθμό:",
+            options=list(radio_stations.keys()),
+            index=0,  # Default: Real FM
+            key="radio_station_selector"
+        )
+        
+        # Παίρνουμε το sid ή το όνομα για το Real FM
+        station_id = radio_stations[selected_station_name]
+        
+        # Κατασκευάζουμε το σωστό URL
+        if station_id == "realfm":
+            radio_url = "https://live24.gr/radio/realfm"
+        else:
+            radio_url = f"https://live24.gr/radio/generic.jsp?sid={station_id}"
+        
+        # Εμφανίζουμε το iframe
+        st.markdown(f"""
         <div style="display: flex; justify-content: center; align-items: center; background-color: #f8f9fa; border-radius: 10px; padding: 10px; margin-bottom: 15px;">
-            <iframe src="https://live24.gr/radio/realfm" 
+            <iframe src="{radio_url}" 
                     style="width: 100%; max-width: 600px; height: 120px; border: none; border-radius: 8px;" 
                     allow="autoplay; encrypted-media">
             </iframe>
         </div>
-        <p style="text-align: center; color: #6c757d; font-size: 0.8rem;">Ραδιόφωνο από το <a href="https://live24.gr/radio/realfm" target="_blank">live24.gr</a></p>
+        <p style="text-align: center; color: #6c757d; font-size: 0.8rem;">
+            Ραδιόφωνο από το <a href="{radio_url}" target="_blank">live24.gr</a> | {selected_station_name}
+        </p>
         """, unsafe_allow_html=True)
     # --- Τέλος Ενότητας Ραδιοφώνου ---
     
