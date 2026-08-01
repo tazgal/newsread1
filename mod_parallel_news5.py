@@ -106,13 +106,19 @@ BASE_SOURCES_DATA = [
     {"name": "Καθημερινή", "category": "news", "subcategory": "general", "url": "https://www.kathimerini.gr/"},
     {"name": "Newsit", "category": "news", "subcategory": "general", "url": "https://www.newsit.gr/"},
     {"name": "News247", "category": "news", "subcategory": "general", "url": "https://www.news247.gr/"},
-    {"name": "902", "category": "news", "subcategory": "general", "url": "https://www.902.gr/"},
-    {"name": "Rizospastis", "category": "news", "subcategory": "general", "url": "https://www.rizospastis.gr/"},
-    {"name": "Εφημερίδα Συντακτών", "category": "news", "subcategory": "general", "url": "https://www.efsyn.gr"},
     {"name": "Capital", "category": "news", "subcategory": "general", "url": "https://www.capital.gr/"},
     {"name": "CNN Greece", "category": "news", "subcategory": "general", "url": "https://www.cnn.gr/"},
-    {"name": "Ναυτεμπορική", "category": "news", "subcategory": "general", "url": "https://www.naftemporiki.gr/"},
+    {"name": "ieidiseis", "category": "news", "subcategory": "general", "url": "https://www.ieidiseis.gr"},
+    {"name": "iefimerida", "category": "news", "subcategory": "general", "url": "https://www.iefimerida.gr"},
     {"name": "Zougla", "category": "news", "subcategory": "general", "url": "https://www.zougla.gr/"},
+    {"name": "902", "category": "news", "subcategory": "general", "url": "https://www.902.gr/"},
+    {"name": "Rizospastis", "category": "news", "subcategory": "general", "url": "https://www.rizospastis.gr/"},
+    {"name": "Εφημερίδα Συντακτών", "category": "news", "subcategory": "general", "url": "https://www.efsyn.gr"},    
+    {"name": "Ναυτεμπορική", "category": "news", "subcategory": "general", "url": "https://www.naftemporiki.gr/"},
+    {"name": "Megatv", "category": "news", "subcategory": "general", "url": "https://www.megatv.com/live/"},
+    {"name": "Ant1", "category": "news", "subcategory": "general", "url": "https://www.antenna.gr/live"},
+    {"name": "Opentv", "category": "news", "subcategory": "general", "url": "https://www.tvopen.gr/live"},
+        
     
     # International - Geopolitics
     {"name": "The Cradle", "category": "international sources", "subcategory": "geopolitics", "url": "https://new.thecradle.co/"},
@@ -222,7 +228,7 @@ def get_sources_by_category(all_sources, category):
     return [item for item in all_sources if item['category'] == category]
 
 def main():
-    st.title("📰 News Dashboard - Iframe + Scraping")
+    st.title("📰 Taz's News Dashboard")
     st.caption("💡 Επιλέξτε κατηγορία και δείτε ΟΛΕΣ τις πηγές ταυτόχρονα")
 
        # --- Ενότητα Ραδιοφώνου ---
@@ -242,7 +248,10 @@ def main():
     categories = get_categories(all_sources)
     
     if 'selected_category' not in st.session_state:
-        st.session_state.selected_category = categories[0] if categories else ""
+           if "news" in categories:
+                st.session_state.selected_category = "news"
+            else:
+                st.session_state.selected_category = categories[0] if categories else ""
     
     if 'news_data' not in st.session_state:
         st.session_state.news_data = {}
