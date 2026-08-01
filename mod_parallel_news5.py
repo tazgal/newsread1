@@ -250,7 +250,7 @@ def main():
     if 'selected_category' not in st.session_state:
        if "news" in categories:
             st.session_state.selected_category = "news"
-        else:
+       else:
             st.session_state.selected_category = categories[0] if categories else ""
     
     if 'news_data' not in st.session_state:
