@@ -178,12 +178,12 @@ BASE_SOURCES_DATA = [
     
     # Parapolitical
     {"name": "To Vima - Vimatodotis", "category": "parapolitical", "subcategory": "political", "url": "https://www.tovima.gr/editor/vimatodotis/"},
-    {"name": "Powergame - Big Mouth", "category": "parapolitical", "subcategory": "political", "url": "https://www.powergame.gr/category/big-mouth/"},
+    {"name": "Newsit - Apocryptografos", "category": "parapolitical", "subcategory": "political", "url": "https://www.newsit.gr/category/blogs/apocryptografos/", "notes": "Το περιεχόμενο που ανακτήθηκε ήταν κυρίως ένα μήνυμα συγκατάθεσης για cookies."},
     {"name": "New Money - Dark Room", "category": "parapolitical", "subcategory": "political", "url": "https://www.newmoney.gr/category/dark-room/"},
+    {"name": "Powergame - Big Mouth", "category": "parapolitical", "subcategory": "political", "url": "https://www.powergame.gr/category/big-mouth/"},
     {"name": "Kathimerini - Theoreio", "category": "parapolitical", "subcategory": "political", "url": "https://www.kathimerini.gr/columns/theoreio/", "notes": "Η πρόσβαση στο περιεχόμενο απαγορεύτηκε (σφάλμα 403)."},
     {"name": "Kathimerini - Business Talk", "category": "parapolitical", "subcategory": "political", "url": "https://www.kathimerini.gr/columns/business-talk/", "notes": "Η πρόσβαση στο περιεχόμενο απαγορεύτηκε (σφάλμα 403)."},
     {"name": "Newsit - Me to Ganti", "category": "parapolitical", "subcategory": "political", "url": "https://www.newsit.gr/category/blogs/me-to-ganti/"},
-    {"name": "Newsit - Apocryptografos", "category": "parapolitical", "subcategory": "political", "url": "https://www.newsit.gr/category/blogs/apocryptografos/", "notes": "Το περιεχόμενο που ανακτήθηκε ήταν κυρίως ένα μήνυμα συγκατάθεσης για cookies."},
     {"name": "Naftemporiki - Paraskiniaka", "category": "parapolitical", "subcategory": "political", "url": "https://www.naftemporiki.gr/paraskiniaka/"}
 
 ]
