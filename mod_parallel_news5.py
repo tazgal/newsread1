@@ -14,7 +14,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# CSS - ΠΡΟΣΟΧΗ: ΤΑ ΕΙΣΑΓΩΓΙΚΑ ΠΡΕΠΕΙ ΝΑ ΚΛΕΙΝΟΥΝ ΣΩΣΤΑ
+# CSS
 st.markdown("""
 <style>
     .news-card {
@@ -39,6 +39,18 @@ st.markdown("""
         overflow: hidden;
         text-overflow: ellipsis;
     }
+    .news-card h4 a {
+        color: #1e3c72;
+        text-decoration: none;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .news-card h4 a:hover {
+        color: #ff6b35;
+        text-decoration: underline;
+    }
     .news-card .iframe-wrapper {
         flex: 2;
         min-height: 250px;
@@ -46,44 +58,11 @@ st.markdown("""
         overflow: hidden;
         background-color: #f5f5f5;
         margin-bottom: 10px;
-        position: relative;
     }
     .news-card .iframe-wrapper iframe {
         width: 100%;
         height: 100%;
         border: none;
-    }
-    /* Overlay που κάνει το iframe clickable */
-    .news-card .iframe-wrapper .iframe-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        cursor: pointer;
-        z-index: 10;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: rgba(30, 60, 114, 0.05);
-        transition: all 0.3s ease;
-    }
-    .news-card .iframe-wrapper .iframe-overlay:hover {
-        background: rgba(30, 60, 114, 0.1);
-    }
-    .news-card .iframe-wrapper .iframe-overlay .click-hint {
-        background: rgba(30, 60, 114, 0.8);
-        color: white;
-        padding: 8px 16px;
-        border-radius: 20px;
-        font-size: 12px;
-        font-weight: bold;
-        opacity: 0;
-        transition: all 0.3s ease;
-        pointer-events: none;
-    }
-    .news-card .iframe-wrapper .iframe-overlay:hover .click-hint {
-        opacity: 1;
     }
     .news-card .articles-list {
         flex: 1;
@@ -271,7 +250,7 @@ def get_sources_by_category(all_sources, category):
 
 def main():
     st.title("📰 Taz's News Dashboard")
-    st.caption("💡 Επιλέξτε κατηγορία και δείτε ΟΛΕΣ τις πηγές ταυτόχρονα. Κάντε κλικ πάνω σε οποιοδήποτε iframe για να ανοίξει η ιστοσελίδα.")
+    st.caption("💡 Πατήστε στον τίτλο της πηγής για να ανοίξει η ιστοσελίδα σε νέο παράθυρο")
 
     with st.expander("🎙️ Επιλογή Ραδιοφώνου Live", expanded=True):
         radio_stations = {
@@ -458,17 +437,15 @@ def main():
                     
                     with cols[col_idx]:
                         with st.container():
+                            # Ο τίτλος είναι τώρα link
                             st.markdown(f"""
                             <div class="news-card">
-                                <h4>📰 {source_name}</h4>
+                                <h4><a href="{source_url}" target="_blank">📰 {source_name}</a></h4>
                                 <div class="iframe-wrapper">
                                     <iframe src="{source_url}" 
                                             sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
                                             loading="lazy">
                                     </iframe>
-                                    <a href="{source_url}" target="_blank" class="iframe-overlay">
-                                        <span class="click-hint">🔗 Κάντε κλικ για να ανοίξει η ιστοσελίδα</span>
-                                    </a>
                                 </div>
                                 <div class="articles-list">
                             """, unsafe_allow_html=True)
