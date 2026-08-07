@@ -171,7 +171,7 @@ BASE_SOURCES_DATA = [
     "category": "international sources",
     "subcategory": "turkey",
     "url": "https://edotourkia.gr/el/"
-  }
+  },
     {"name": "The Cradle", "category": "international sources", "subcategory": "geopolitics", "url": "https://new.thecradle.co/"},
     {"name": "Foreign Affairs", "category": "international sources", "subcategory": "geopolitics", "url": "https://www.foreignaffairs.com/"},
     {"name": "Bloomberg Geopolitics", "category": "international sources", "subcategory": "geopolitics", "url": "https://www.bloomberg.com/politics"},
