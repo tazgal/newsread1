@@ -186,6 +186,8 @@ BASE_SOURCES_DATA = [
     {"name": "Newsit - Apocryptografos", "category": "parapolitical", "subcategory": "political", "url": "https://www.newsit.gr/category/blogs/apocryptografos/", "notes": "Το περιεχόμενο που ανακτήθηκε ήταν κυρίως ένα μήνυμα συγκατάθεσης για cookies."},
     {"name": "Naftemporiki - Paraskiniaka", "category": "parapolitical", "subcategory": "political", "url": "https://www.naftemporiki.gr/paraskiniaka/"}
 
+]
+
 CUSTOM_SOURCES_FILE = "custom_sources.json"
 
 def load_custom_sources():
