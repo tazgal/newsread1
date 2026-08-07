@@ -122,17 +122,66 @@ BASE_SOURCES_DATA = [
         
     
     # International - Geopolitics
-    {"name": "The Cradle", "category": "international sources", "subcategory": "geopolitics", "url": "https://new.thecradle.co/"},
-    {"name": "NATO", "category": "international sources", "subcategory": "geopolitics", "url": "https://www.nato.int/"},
     {"name": "Atlantic Council", "category": "international sources", "subcategory": "geopolitics", "url": "https://www.atlanticcouncil.org/"},
+    {"name": "Axios", "category": "international sources", "subcategory": "west", "url": "https://www.axios.com/"},
+    {
+    "name": "Axios",
+    "category": "international sources",
+    "subcategory": "geopolitics",
+    "url": "https://www.axios.com/"
+  },
+  {
+    "name": "Al Jazeera",
+    "category": "international sources",
+    "subcategory": "geopolitics",
+    "url": "https://www.aljazeera.com/"
+  },
+  {
+    "name": "People's Daily",
+    "category": "international sources",
+    "subcategory": "china",
+    "url": "http://en.people.cn/index.html"
+  },
+  {
+    "name": "PressReader",
+    "category": "international sources",
+    "subcategory": "global news",
+    "url": "https://www.pressreader.com/"
+  },
+  {
+    "name": "Reuters World",
+    "category": "international sources",
+    "subcategory": "global news",
+    "url": "https://www.reuters.com/"
+  },
+  {
+    "name": "BBC Monitoring – Global News",
+    "category": "international sources",
+    "subcategory": "global news",
+    "url": "https://monitoring.bbc.co.uk/"
+  },
+  {
+    "name": "Al Jazeera | Crisis Zones",
+    "category": "international sources",
+    "subcategory": "crisis zones",
+    "url": "https://www.aljazeera.com/news/crisis/"
+  },
+  {
+    "name": "eDoTourkia",
+    "category": "international sources",
+    "subcategory": "turkey",
+    "url": "https://edotourkia.gr/el/"
+  }
+    {"name": "The Cradle", "category": "international sources", "subcategory": "geopolitics", "url": "https://new.thecradle.co/"},
     {"name": "Foreign Affairs", "category": "international sources", "subcategory": "geopolitics", "url": "https://www.foreignaffairs.com/"},
     {"name": "Bloomberg Geopolitics", "category": "international sources", "subcategory": "geopolitics", "url": "https://www.bloomberg.com/politics"},
+    {"name": "NATO", "category": "international sources", "subcategory": "geopolitics", "url": "https://www.nato.int/"},
+
     
     # International - West
     {"name": "CNN", "category": "international sources", "subcategory": "west", "url": "https://edition.cnn.com"},
     {"name": "BBC", "category": "international sources", "subcategory": "west", "url": "https://www.bbc.com/news"},
     {"name": "Reuters World", "category": "international sources", "subcategory": "west", "url": "https://www.reuters.com/news/world"},
-    {"name": "Axios", "category": "international sources", "subcategory": "west", "url": "https://www.axios.com/"},
     
     # International - Eurasia
     {"name": "Al Jazeera", "category": "international sources", "subcategory": "Eurasia", "url": "https://www.aljazeera.com/"},
