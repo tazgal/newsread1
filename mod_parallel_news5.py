@@ -168,9 +168,11 @@ BASE_SOURCES_DATA = [
     
     
     # Global Economy
+    {"name": "Politico", "category": "global economy", "subcategory": "think tanks", "url": "https://www.politico.com/tax-finance-economy-news-updates-analysis"},
+    {"name": "Cnn Business", "category": "global economy", "subcategory": "think tanks", "url": "https://edition.cnn.com/business"},
+    {"name": "Investopedia", "category": "global economy", "subcategory": "think tanks", "url": "https://www.investopedia.com"},
     {"name": "Brookings", "category": "global economy", "subcategory": "think tanks", "url": "https://www.brookings.edu"},
     {"name": "Bloomberg", "category": "global economy", "subcategory": "think tanks", "url": "https://www.bloomberg.com/europe"},
-    {"name": "Politico", "category": "global economy", "subcategory": "think tanks", "url": "https://www.politico.com/tax-finance-economy-news-updates-analysis"},
     {"name": "IMF", "category": "global economy", "subcategory": "think tanks", "url": "https://www.imf.org/en/Home"},
     {"name": "World Bank", "category": "global economy", "subcategory": "think tanks", "url": "https://www.worldbank.org/en/home"},
     {"name": "OECD", "category": "global economy", "subcategory": "think tanks", "url": "https://www.oecd.org/"},
