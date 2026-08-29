@@ -130,12 +130,12 @@ BASE_SOURCES_DATA = [
     {"name": "Ναυτεμπορική", "category": "news", "subcategory": "general", "url": "https://www.naftemporiki.gr/"},
     {"name": "ERT News Live TV (Abroad)", "category": "news", "subcategory": "live_tv", "url": "https://www.ertnews.gr/live-tv-abroad/"},
     {"name": "Skai TV Live", "category": "news", "subcategory": "live_tv", "url": "https://www.skai.gr/tv/live"},
-    {"name": "Naftemporiki TV Live", "category": "news", "subcategory": "live_tv", "url": "https://www.naftemporikitv.gr/live-tv/"},
+    {"name": "Vouli TV (Hellenic Parliament)", "category": "news", "subcategory": "live_tv", "url": "https://diavlos-cache.cnt.grnet.gr/app/index.html#/el/embed/room/6015"},
     {"name": "Megatv", "category": "news", "subcategory": "general", "url": "https://www.megatv.com/live/"},
     {"name": "Ant1", "category": "news", "subcategory": "general", "url": "https://www.antenna.gr/live"},
-    {"name": "Opentv", "category": "news", "subcategory": "general", "url": "https://www.tvopen.gr/live"},
-    {"name": "Vouli TV (Hellenic Parliament)", "category": "news", "subcategory": "live_tv", "url": "https://diavlos-cache.cnt.grnet.gr/app/index.html#/el/embed/room/6015"},
+    {"name": "Opentv", "category": "news", "subcategory": "general", "url": "https://www.tvopen.gr/live"},    
     {"name": "Star TV Live Stream", "category": "news", "subcategory": "live_tv", "url": "https://www.star.gr/tv/live-stream"},
+    {"name": "Naftemporiki TV Live", "category": "news", "subcategory": "live_tv", "url": "https://www.naftemporikitv.gr/live-tv/"},
     
     # International - Geopolitics
     {"name": "Atlantic Council", "category": "international sources", "subcategory": "geopolitics", "url": "https://www.atlanticcouncil.org/"},
@@ -168,10 +168,12 @@ BASE_SOURCES_DATA = [
     
     
     # Global Economy
+    {"name": "Brookings", "category": "global economy", "subcategory": "think tanks", "url": "https://www.brookings.edu"},
+    {"name": "Bloomberg", "category": "global economy", "subcategory": "think tanks", "url": "https://www.bloomberg.com/europe"},
+    {"name": "Politico", "category": "global economy", "subcategory": "think tanks", "url": "https://www.politico.com/tax-finance-economy-news-updates-analysis"},
     {"name": "IMF", "category": "global economy", "subcategory": "think tanks", "url": "https://www.imf.org/en/Home"},
     {"name": "World Bank", "category": "global economy", "subcategory": "think tanks", "url": "https://www.worldbank.org/en/home"},
     {"name": "OECD", "category": "global economy", "subcategory": "think tanks", "url": "https://www.oecd.org/"},
-    {"name": "Brookings", "category": "global economy", "subcategory": "think tanks", "url": "https://www.brookings.edu"},
     {"name": "MarketWatch", "category": "global economy", "subcategory": "general", "url": "https://www.marketwatch.com/"},
     
     # Greek Economy
