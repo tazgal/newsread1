@@ -135,7 +135,7 @@ BASE_SOURCES_DATA = [
     {"name": "Vouli TV (Hellenic Parliament)", "category": "news", "subcategory": "live_tv", "url": "https://diavlos-cache.cnt.grnet.gr/app/index.html#/el/embed/room/6015"},
     {"name": "Star TV Live Stream", "category": "news", "subcategory": "live_tv", "url": "https://www.star.gr/tv/live-stream"},
     {"name": "Skai TV Live", "category": "news", "subcategory": "live_tv", "url": "https://www.skai.gr/tv/live"},
-    {"name": "Naftemporiki TV Live", "category": "news", "subcategory": "live_tv", "url": "https://www.naftemporikitv.gr/live-tv/"}
+    {"name": "Naftemporiki TV Live", "category": "news", "subcategory": "live_tv", "url": "https://www.naftemporikitv.gr/live-tv/"},
     
         
     
