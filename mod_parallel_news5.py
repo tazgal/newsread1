@@ -128,16 +128,14 @@ BASE_SOURCES_DATA = [
     {"name": "Εφημερίδα Συντακτών", "category": "news", "subcategory": "general", "url": "https://www.efsyn.gr"},
     {"name": "ieidiseis", "category": "news", "subcategory": "general", "url": "https://www.ieidiseis.gr"},
     {"name": "Ναυτεμπορική", "category": "news", "subcategory": "general", "url": "https://www.naftemporiki.gr/"},
+    {"name": "ERT News Live TV (Abroad)", "category": "news", "subcategory": "live_tv", "url": "https://www.ertnews.gr/live-tv-abroad/"},
+    {"name": "Skai TV Live", "category": "news", "subcategory": "live_tv", "url": "https://www.skai.gr/tv/live"},
+    {"name": "Naftemporiki TV Live", "category": "news", "subcategory": "live_tv", "url": "https://www.naftemporikitv.gr/live-tv/"},
     {"name": "Megatv", "category": "news", "subcategory": "general", "url": "https://www.megatv.com/live/"},
     {"name": "Ant1", "category": "news", "subcategory": "general", "url": "https://www.antenna.gr/live"},
     {"name": "Opentv", "category": "news", "subcategory": "general", "url": "https://www.tvopen.gr/live"},
-    {"name": "ERT News Live TV (Abroad)", "category": "news", "subcategory": "live_tv", "url": "https://www.ertnews.gr/live-tv-abroad/"},
     {"name": "Vouli TV (Hellenic Parliament)", "category": "news", "subcategory": "live_tv", "url": "https://diavlos-cache.cnt.grnet.gr/app/index.html#/el/embed/room/6015"},
     {"name": "Star TV Live Stream", "category": "news", "subcategory": "live_tv", "url": "https://www.star.gr/tv/live-stream"},
-    {"name": "Skai TV Live", "category": "news", "subcategory": "live_tv", "url": "https://www.skai.gr/tv/live"},
-    {"name": "Naftemporiki TV Live", "category": "news", "subcategory": "live_tv", "url": "https://www.naftemporikitv.gr/live-tv/"},
-    
-        
     
     # International - Geopolitics
     {"name": "Atlantic Council", "category": "international sources", "subcategory": "geopolitics", "url": "https://www.atlanticcouncil.org/"},
@@ -263,6 +261,19 @@ def get_sources_by_category(all_sources, category):
 def main():
     st.title("📰 Taz's News Dashboard")
     st.caption("💡 Πατήστε στον τίτλο της πηγής για να ανοίξει η ιστοσελίδα σε νέο παράθυρο")
+
+    with st.expander("📰 Frontages.gr - Πρωτοσέλιδα Εφημερίδων", expanded=True):
+    st.markdown("""
+    <div style="display: flex; justify-content: center; align-items: center; background-color: #f8f9fa; border-radius: 10px; padding: 10px; margin-bottom: 15px;">
+        <iframe src="https://frontages.gr" 
+                style="width: 100%; height: 700px; border: none; border-radius: 8px;" 
+                allow="autoplay; encrypted-media">
+        </iframe>
+    </div>
+    <p style="text-align: center; color: #6c757d; font-size: 0.8rem;">
+        <a href="https://frontages.gr" target="_blank">Άνοιγμα σε νέο παράθυρο</a>
+    </p>
+    """, unsafe_allow_html=True)
 
     with st.expander("🎙️ Επιλογή Ραδιοφώνου Live", expanded=True):
         radio_stations = {
