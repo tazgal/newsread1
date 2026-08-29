@@ -131,6 +131,12 @@ BASE_SOURCES_DATA = [
     {"name": "Megatv", "category": "news", "subcategory": "general", "url": "https://www.megatv.com/live/"},
     {"name": "Ant1", "category": "news", "subcategory": "general", "url": "https://www.antenna.gr/live"},
     {"name": "Opentv", "category": "news", "subcategory": "general", "url": "https://www.tvopen.gr/live"},
+    {"name": "ERT News Live TV (Abroad)", "category": "news", "subcategory": "live_tv", "url": "https://www.ertnews.gr/live-tv-abroad/"},
+    {"name": "Vouli TV (Hellenic Parliament)", "category": "news", "subcategory": "live_tv", "url": "https://diavlos-cache.cnt.grnet.gr/app/index.html#/el/embed/room/6015"},
+    {"name": "Star TV Live Stream", "category": "news", "subcategory": "live_tv", "url": "https://www.star.gr/tv/live-stream"},
+    {"name": "Skai TV Live", "category": "news", "subcategory": "live_tv", "url": "https://www.skai.gr/tv/live"},
+    {"name": "Naftemporiki TV Live", "category": "news", "subcategory": "live_tv", "url": "https://www.naftemporikitv.gr/live-tv/"}
+    
         
     
     # International - Geopolitics
