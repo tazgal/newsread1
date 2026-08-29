@@ -265,7 +265,7 @@ def main():
     with st.expander("📰 Frontages.gr - Πρωτοσέλιδα Εφημερίδων", expanded=True):
         st.markdown("""
         <div style="display: flex; justify-content: center; align-items: center; background-color: #f8f9fa; border-radius: 10px; padding: 10px; margin-bottom: 15px;">
-            <iframe src="https://frontages.gr" 
+            <iframe src="https://www.frontpages.gr" 
                     style="width: 100%; height: 700px; border: none; border-radius: 8px;" 
                     allow="autoplay; encrypted-media">
             </iframe>
