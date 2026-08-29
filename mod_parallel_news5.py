@@ -263,17 +263,17 @@ def main():
     st.caption("💡 Πατήστε στον τίτλο της πηγής για να ανοίξει η ιστοσελίδα σε νέο παράθυρο")
 
     with st.expander("📰 Frontages.gr - Πρωτοσέλιδα Εφημερίδων", expanded=True):
-    st.markdown("""
-    <div style="display: flex; justify-content: center; align-items: center; background-color: #f8f9fa; border-radius: 10px; padding: 10px; margin-bottom: 15px;">
-        <iframe src="https://frontages.gr" 
-                style="width: 100%; height: 700px; border: none; border-radius: 8px;" 
-                allow="autoplay; encrypted-media">
-        </iframe>
-    </div>
-    <p style="text-align: center; color: #6c757d; font-size: 0.8rem;">
-        <a href="https://frontages.gr" target="_blank">Άνοιγμα σε νέο παράθυρο</a>
-    </p>
-    """, unsafe_allow_html=True)
+        st.markdown("""
+        <div style="display: flex; justify-content: center; align-items: center; background-color: #f8f9fa; border-radius: 10px; padding: 10px; margin-bottom: 15px;">
+            <iframe src="https://frontages.gr" 
+                    style="width: 100%; height: 700px; border: none; border-radius: 8px;" 
+                    allow="autoplay; encrypted-media">
+            </iframe>
+        </div>
+        <p style="text-align: center; color: #6c757d; font-size: 0.8rem;">
+            <a href="https://frontages.gr" target="_blank">Άνοιγμα σε νέο παράθυρο</a>
+        </p>
+        """, unsafe_allow_html=True)
 
     with st.expander("🎙️ Επιλογή Ραδιοφώνου Live", expanded=True):
         radio_stations = {
