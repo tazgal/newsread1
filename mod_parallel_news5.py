@@ -285,6 +285,7 @@ def main():
             "Παραπολιτικά FM 90.1": "1986",
             "ERTnews Radio 105.8": "2073",
             "ΣΚΑΪ 100.3": "1334",
+            "Mega 104.6":"Mega"
         }
         
         selected_station_name = st.selectbox(
